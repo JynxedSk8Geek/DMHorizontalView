@@ -1,8 +1,8 @@
 //
 //  main.m
-//  DMHorizontalView
+//  Demo
 //
-//  Created by David Martinez Lebron on 4/3/16.
+//  Created by David Martinez Lebron on 4/4/16.
 //  Copyright © 2016 Davaur. All rights reserved.
 //
 

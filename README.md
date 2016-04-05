@@ -13,6 +13,9 @@ A very simple and easy to use tool to make horizontal distribution of subviews.
 
 If all the subviews won't fit in the superview, automatically adds a three dots label (..) for you.
 
+# Installation
+Drag to your project all files inside DMHorizontalView folder. If using swift, add `UIView+HorizontalView.h` to you bridging header file.
+
 # Example
 ```
 - (void)viewDidLoad {

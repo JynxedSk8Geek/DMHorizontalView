@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIView+Subviews.h
 //  DMHorizontalView
 //
 //  Created by David Martinez Lebron on 4/3/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIView (Subviews)
 
+-(void) removeAllSubviews;
 
 @end
-

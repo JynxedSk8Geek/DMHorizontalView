@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD3DFD901CB17D0C0060A79A"
-               BuildableName = "DMHorizontalView.app"
-               BlueprintName = "DMHorizontalView"
-               ReferencedContainer = "container:DMHorizontalView.xcodeproj">
+               BlueprintIdentifier = "BDE5A3F71CB35D6200F1D749"
+               BuildableName = "Demo.app"
+               BlueprintName = "Demo"
+               ReferencedContainer = "container:Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD3DFD901CB17D0C0060A79A"
-            BuildableName = "DMHorizontalView.app"
-            BlueprintName = "DMHorizontalView"
-            ReferencedContainer = "container:DMHorizontalView.xcodeproj">
+            BlueprintIdentifier = "BDE5A3F71CB35D6200F1D749"
+            BuildableName = "Demo.app"
+            BlueprintName = "Demo"
+            ReferencedContainer = "container:Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD3DFD901CB17D0C0060A79A"
-            BuildableName = "DMHorizontalView.app"
-            BlueprintName = "DMHorizontalView"
-            ReferencedContainer = "container:DMHorizontalView.xcodeproj">
+            BlueprintIdentifier = "BDE5A3F71CB35D6200F1D749"
+            BuildableName = "Demo.app"
+            BlueprintName = "Demo"
+            ReferencedContainer = "container:Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD3DFD901CB17D0C0060A79A"
-            BuildableName = "DMHorizontalView.app"
-            BlueprintName = "DMHorizontalView"
-            ReferencedContainer = "container:DMHorizontalView.xcodeproj">
+            BlueprintIdentifier = "BDE5A3F71CB35D6200F1D749"
+            BuildableName = "Demo.app"
+            BlueprintName = "Demo"
+            ReferencedContainer = "container:Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
