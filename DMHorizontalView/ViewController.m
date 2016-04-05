@@ -20,6 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    // creates the super view
+    UIView *superView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, CGRectGetWidth(self.view.frame), 70)];
+    
+    
+    // creates the subviews empty array
+    NSMutableArray<UIView *> *viewsArray = [NSMutableArray array];
+    
+    // populates the subviews array
+    for (int i=0; i < 5; i++) {
+        [viewsArray addObject:[self viewForSubviews]];
+    }
+    
+    // call the instance method
+    [superView horizontalViewWithViewsArray:viewsArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCentered];
+    
+    
+    // add super view to view controller
+    [self.view addSubview:superView];
 }
 
 
@@ -42,11 +61,11 @@
 
 -(UIView *) viewForSubviews {
     
-    CGFloat size = 25;
+    CGFloat size = 40;
     
     // CGPoint is not important
     UIView *subview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size, size)];
-    [subview setBackgroundColor:[UIColor whiteColor]];
+    [subview setBackgroundColor:[UIColor redColor]];
     
     return subview;
     

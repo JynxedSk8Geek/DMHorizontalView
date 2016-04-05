@@ -12,7 +12,7 @@
 #import "UILabel+Subview.h"
 
 /**
- Horizontal distribution of subviews distribution in superview in x axis
+ Horizontal distribution of subviews distribution in superview in the x axis
  */
 typedef enum {
     /** Distributes subviews uniformally in superview */
@@ -24,7 +24,7 @@ typedef enum {
 } HorizontalDistribution;
 
 /**
- Horizontal distribution of subviews location in superview in y axis
+ Vertical Location of subviews in superview in the y axis
  */
 typedef enum {
     /** Top location in superview */
