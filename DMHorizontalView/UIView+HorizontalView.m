@@ -14,24 +14,6 @@ static const CGFloat kVerticalMargin = 1.0;
 
 @implementation UIView (HorizontalView)
 
-//TODO: Finish imlementing this function to calculate if views are to be added
-//-(CGFloat) isLastView:(BOOL) isLastView in: (HorizontalDistribution) horizontalDistribution {
-//    switch (horizontalDistribution) {
-//        case HorizontalDistributionFill:
-//            return 1.0;
-//
-//        case HorizontalDistributionNormal:
-//
-//            return 1.0;
-//
-//        case HorizontalDistributionOverlapped:
-//
-//            return 1.0;
-//
-//        default:
-//            return 0.0;
-//    }
-//}
 
 -(void) horizontalViewWithViewsArray:(NSArray<UIView *> *) viewsArray withHorizontalDistribution:(HorizontalDistribution) horizontalDistribution andVerticalLocation:(VerticalLocation) verticalLocation {
     
@@ -146,6 +128,11 @@ static const CGFloat kVerticalMargin = 1.0;
     CGFloat originX = 0;
     
     for (UIView *subview in viewsArray) {
+        
+        if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kOverlappedValue]) {
+            return;
+        }
+        
         if (lastSubviewOriginX > 0.0) {
             originX = lastSubviewOriginX + (kOverlappedValue * CGRectGetWidth(subview.frame));
         }
@@ -158,7 +145,6 @@ static const CGFloat kVerticalMargin = 1.0;
         lastSubviewOriginX = subview.frame.origin.x;
         
          [self addSubview:subview];
-        
     }
 
 }
