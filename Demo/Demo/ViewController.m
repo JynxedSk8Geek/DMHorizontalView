@@ -94,8 +94,6 @@
     [subview setBackgroundColor:[self randomColor]];
     
     return subview;
-    
-    
 }
 
 
