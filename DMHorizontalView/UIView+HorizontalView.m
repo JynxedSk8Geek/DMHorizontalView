@@ -129,6 +129,10 @@ static const CGFloat kVerticalMargin = 1.0;
     
     for (UIView *subview in viewsArray) {
         
+        // add borders with the same color of the superview
+        [[subview layer] setBorderWidth:1.0f];
+        [[subview layer] setBorderColor:[self backgroundColor].CGColor];
+        
         if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kOverlappedValue]) {
             return;
         }

@@ -12,6 +12,7 @@
 		BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */; };
 		BD5CF3A71CBC0C970099DA9B /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */; };
 		BD5CF3A81CBC0C970099DA9B /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */; };
+		BD5CF3AE1CBC11D20099DA9B /* UIImage+SocialNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF3AD1CBC11D20099DA9B /* UIImage+SocialNetworks.m */; };
 		BDE5A3FD1CB35D6200F1D749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A3FC1CB35D6200F1D749 /* main.m */; };
 		BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */; };
 		BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A4021CB35D6200F1D749 /* ViewController.m */; };
@@ -31,16 +32,18 @@
 		BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "../../DMHorizontalView/UIView+Shadow.m"; sourceTree = "<group>"; };
 		BD5CF3A21CBC0C970099DA9B /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Subviews.h"; path = "../../DMHorizontalView/UIView+Subviews.h"; sourceTree = "<group>"; };
 		BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Subviews.m"; path = "../../DMHorizontalView/UIView+Subviews.m"; sourceTree = "<group>"; };
+		BD5CF3AC1CBC11D20099DA9B /* UIImage+SocialNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SocialNetworks.h"; sourceTree = "<group>"; };
+		BD5CF3AD1CBC11D20099DA9B /* UIImage+SocialNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SocialNetworks.m"; sourceTree = "<group>"; };
 		BDE5A3F81CB35D6200F1D749 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE5A3FC1CB35D6200F1D749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BDE5A4011CB35D6200F1D749 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BDE5A4021CB35D6200F1D749 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BDE5A4071CB35D6200F1D749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Demo/AppDelegate.h; sourceTree = "<group>"; };
+		BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Demo/AppDelegate.m; sourceTree = "<group>"; };
+		BDE5A4011CB35D6200F1D749 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Demo/ViewController.h; sourceTree = "<group>"; };
+		BDE5A4021CB35D6200F1D749 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Demo/ViewController.m; sourceTree = "<group>"; };
+		BDE5A4071CB35D6200F1D749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Demo/Assets.xcassets; sourceTree = "<group>"; };
 		BDE5A40A1CB35D6200F1D749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BDE5A40C1CB35D6200F1D749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDE5A4121CB35D9900F1D749 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BDE5A40C1CB35D6200F1D749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Demo/Info.plist; sourceTree = "<group>"; };
+		BDE5A4121CB35D9900F1D749 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Demo/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +72,33 @@
 				BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */,
 			);
 			name = DMHorizontalView;
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		BD5CF3AB1CBC11BF0099DA9B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BD5CF3AC1CBC11D20099DA9B /* UIImage+SocialNetworks.h */,
+				BD5CF3AD1CBC11D20099DA9B /* UIImage+SocialNetworks.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		BDE5A3EF1CB35D6200F1D749 = {
 			isa = PBXGroup;
 			children = (
 				BDE5A3FA1CB35D6200F1D749 /* Demo */,
+				BD5CF3A91CBC0CA50099DA9B /* DMHorizontalView */,
+				BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */,
+				BD5CF3AB1CBC11BF0099DA9B /* Categories */,
+				BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */,
+				BDE5A4011CB35D6200F1D749 /* ViewController.h */,
+				BDE5A4021CB35D6200F1D749 /* ViewController.m */,
+				BDE5A4071CB35D6200F1D749 /* Assets.xcassets */,
+				BDE5A4121CB35D9900F1D749 /* Main.storyboard */,
+				BDE5A4091CB35D6200F1D749 /* LaunchScreen.storyboard */,
+				BDE5A40C1CB35D6200F1D749 /* Info.plist */,
+				BDE5A3FB1CB35D6200F1D749 /* Supporting Files */,
 				BDE5A3F91CB35D6200F1D749 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,16 +114,6 @@
 		BDE5A3FA1CB35D6200F1D749 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BD5CF3A91CBC0CA50099DA9B /* DMHorizontalView */,
-				BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */,
-				BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */,
-				BDE5A4011CB35D6200F1D749 /* ViewController.h */,
-				BDE5A4021CB35D6200F1D749 /* ViewController.m */,
-				BDE5A4071CB35D6200F1D749 /* Assets.xcassets */,
-				BDE5A4121CB35D9900F1D749 /* Main.storyboard */,
-				BDE5A4091CB35D6200F1D749 /* LaunchScreen.storyboard */,
-				BDE5A40C1CB35D6200F1D749 /* Info.plist */,
-				BDE5A3FB1CB35D6200F1D749 /* Supporting Files */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 				BDE5A3FC1CB35D6200F1D749 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +199,7 @@
 			files = (
 				BD5CF3A81CBC0C970099DA9B /* UIView+Subviews.m in Sources */,
 				BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */,
+				BD5CF3AE1CBC11D20099DA9B /* UIImage+SocialNetworks.m in Sources */,
 				BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */,
 				BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */,
 				BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */,
@@ -202,6 +218,7 @@
 				BDE5A40A1CB35D6200F1D749 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
