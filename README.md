@@ -3,7 +3,7 @@ Ever found yourself making calculations to make horizontal distributions of UIIm
 If so, this is a really simple solution for you.
 It allows you to make distributions horizontally in a super view and select vertical location.
 
-![Screenshot of Demo App](https://github.com/davamale/DMHorizontalView/blob/master/images/Simulator%20Screen%20Shot%20Apr%2011%2C%202016%2C%201.37.07%20PM.png)
+![Screenshot of Demo App](https://github.com/davamale/DMHorizontalView/blob/master/images/Simulator%20Screen%20Shot%20Apr%2011%2C%202016%2C%201.44.14%20PM.png)
 
 # Description
 A very simple and easy to use tool to make horizontal distribution of subviews.
