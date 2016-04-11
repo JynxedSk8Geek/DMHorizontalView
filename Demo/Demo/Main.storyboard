@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4q-4Y-41n">
                                 <rect key="frame" x="0.0" y="126" width="600" height="70"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Gfu-jd-a2Q"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="21" id="lFb-ib-cYA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -56,7 +56,7 @@
         <!--Navigation Controller-->
         <scene sceneID="i1f-wn-KGp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUD-ji-Qhq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dUD-ji-Qhq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WqO-xq-BE4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
