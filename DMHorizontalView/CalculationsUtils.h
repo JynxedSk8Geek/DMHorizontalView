@@ -19,9 +19,6 @@
 
 
 
-
-
-
 /**
  Calculates the center for an object. If inXAxis is false, calculates using Height and Y location, else uses Width and X location.
  */

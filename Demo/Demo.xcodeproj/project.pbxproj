@@ -7,20 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */; };
+		BD5CF3A51CBC0C970099DA9B /* UILabel+Subview.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39D1CBC0C970099DA9B /* UILabel+Subview.m */; };
+		BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */; };
+		BD5CF3A71CBC0C970099DA9B /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */; };
+		BD5CF3A81CBC0C970099DA9B /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */; };
 		BDE5A3FD1CB35D6200F1D749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A3FC1CB35D6200F1D749 /* main.m */; };
 		BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */; };
 		BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A4021CB35D6200F1D749 /* ViewController.m */; };
 		BDE5A4081CB35D6200F1D749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE5A4071CB35D6200F1D749 /* Assets.xcassets */; };
 		BDE5A40B1CB35D6200F1D749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE5A4091CB35D6200F1D749 /* LaunchScreen.storyboard */; };
 		BDE5A4131CB35D9900F1D749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE5A4121CB35D9900F1D749 /* Main.storyboard */; };
-		BDE5A41D1CB35DBF00F1D749 /* UILabel+Subview.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A4161CB35DBF00F1D749 /* UILabel+Subview.m */; };
-		BDE5A41E1CB35DBF00F1D749 /* UIView+HorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A4181CB35DBF00F1D749 /* UIView+HorizontalView.m */; };
-		BDE5A41F1CB35DBF00F1D749 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A41A1CB35DBF00F1D749 /* UIView+Shadow.m */; };
-		BDE5A4201CB35DBF00F1D749 /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A41C1CB35DBF00F1D749 /* UIView+Subviews.m */; };
-		BDE5A4231CB35DE600F1D749 /* CalculationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A4221CB35DE600F1D749 /* CalculationsUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD5CF39A1CBC0C970099DA9B /* CalculationsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculationsUtils.h; path = ../../DMHorizontalView/CalculationsUtils.h; sourceTree = "<group>"; };
+		BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculationsUtils.m; path = ../../DMHorizontalView/CalculationsUtils.m; sourceTree = "<group>"; };
+		BD5CF39C1CBC0C970099DA9B /* UILabel+Subview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Subview.h"; path = "../../DMHorizontalView/UILabel+Subview.h"; sourceTree = "<group>"; };
+		BD5CF39D1CBC0C970099DA9B /* UILabel+Subview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Subview.m"; path = "../../DMHorizontalView/UILabel+Subview.m"; sourceTree = "<group>"; };
+		BD5CF39E1CBC0C970099DA9B /* UIView+HorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+HorizontalView.h"; path = "../../DMHorizontalView/UIView+HorizontalView.h"; sourceTree = "<group>"; };
+		BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+HorizontalView.m"; path = "../../DMHorizontalView/UIView+HorizontalView.m"; sourceTree = "<group>"; };
+		BD5CF3A01CBC0C970099DA9B /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shadow.h"; path = "../../DMHorizontalView/UIView+Shadow.h"; sourceTree = "<group>"; };
+		BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "../../DMHorizontalView/UIView+Shadow.m"; sourceTree = "<group>"; };
+		BD5CF3A21CBC0C970099DA9B /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Subviews.h"; path = "../../DMHorizontalView/UIView+Subviews.h"; sourceTree = "<group>"; };
+		BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Subviews.m"; path = "../../DMHorizontalView/UIView+Subviews.m"; sourceTree = "<group>"; };
 		BDE5A3F81CB35D6200F1D749 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE5A3FC1CB35D6200F1D749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,16 +41,6 @@
 		BDE5A40A1CB35D6200F1D749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE5A40C1CB35D6200F1D749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDE5A4121CB35D9900F1D749 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BDE5A4151CB35DBF00F1D749 /* UILabel+Subview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Subview.h"; sourceTree = "<group>"; };
-		BDE5A4161CB35DBF00F1D749 /* UILabel+Subview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Subview.m"; sourceTree = "<group>"; };
-		BDE5A4171CB35DBF00F1D749 /* UIView+HorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HorizontalView.h"; sourceTree = "<group>"; };
-		BDE5A4181CB35DBF00F1D749 /* UIView+HorizontalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HorizontalView.m"; sourceTree = "<group>"; };
-		BDE5A4191CB35DBF00F1D749 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
-		BDE5A41A1CB35DBF00F1D749 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
-		BDE5A41B1CB35DBF00F1D749 /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Subviews.h"; sourceTree = "<group>"; };
-		BDE5A41C1CB35DBF00F1D749 /* UIView+Subviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Subviews.m"; sourceTree = "<group>"; };
-		BDE5A4211CB35DE600F1D749 /* CalculationsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationsUtils.h; sourceTree = "<group>"; };
-		BDE5A4221CB35DE600F1D749 /* CalculationsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationsUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD5CF3A91CBC0CA50099DA9B /* DMHorizontalView */ = {
+			isa = PBXGroup;
+			children = (
+				BD5CF39A1CBC0C970099DA9B /* CalculationsUtils.h */,
+				BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */,
+				BD5CF39C1CBC0C970099DA9B /* UILabel+Subview.h */,
+				BD5CF39D1CBC0C970099DA9B /* UILabel+Subview.m */,
+				BD5CF39E1CBC0C970099DA9B /* UIView+HorizontalView.h */,
+				BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */,
+				BD5CF3A01CBC0C970099DA9B /* UIView+Shadow.h */,
+				BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */,
+				BD5CF3A21CBC0C970099DA9B /* UIView+Subviews.h */,
+				BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */,
+			);
+			name = DMHorizontalView;
+			sourceTree = "<group>";
+		};
 		BDE5A3EF1CB35D6200F1D749 = {
 			isa = PBXGroup;
 			children = (
@@ -73,11 +90,11 @@
 		BDE5A3FA1CB35D6200F1D749 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BD5CF3A91CBC0CA50099DA9B /* DMHorizontalView */,
 				BDE5A3FE1CB35D6200F1D749 /* AppDelegate.h */,
 				BDE5A3FF1CB35D6200F1D749 /* AppDelegate.m */,
 				BDE5A4011CB35D6200F1D749 /* ViewController.h */,
 				BDE5A4021CB35D6200F1D749 /* ViewController.m */,
-				BDE5A4141CB35DA400F1D749 /* DMHorizontalView */,
 				BDE5A4071CB35D6200F1D749 /* Assets.xcassets */,
 				BDE5A4121CB35D9900F1D749 /* Main.storyboard */,
 				BDE5A4091CB35D6200F1D749 /* LaunchScreen.storyboard */,
@@ -93,23 +110,6 @@
 				BDE5A3FC1CB35D6200F1D749 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BDE5A4141CB35DA400F1D749 /* DMHorizontalView */ = {
-			isa = PBXGroup;
-			children = (
-				BDE5A4211CB35DE600F1D749 /* CalculationsUtils.h */,
-				BDE5A4221CB35DE600F1D749 /* CalculationsUtils.m */,
-				BDE5A4151CB35DBF00F1D749 /* UILabel+Subview.h */,
-				BDE5A4161CB35DBF00F1D749 /* UILabel+Subview.m */,
-				BDE5A4171CB35DBF00F1D749 /* UIView+HorizontalView.h */,
-				BDE5A4181CB35DBF00F1D749 /* UIView+HorizontalView.m */,
-				BDE5A4191CB35DBF00F1D749 /* UIView+Shadow.h */,
-				BDE5A41A1CB35DBF00F1D749 /* UIView+Shadow.m */,
-				BDE5A41B1CB35DBF00F1D749 /* UIView+Subviews.h */,
-				BDE5A41C1CB35DBF00F1D749 /* UIView+Subviews.m */,
-			);
-			name = DMHorizontalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,14 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5CF3A81CBC0C970099DA9B /* UIView+Subviews.m in Sources */,
 				BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */,
-				BDE5A4231CB35DE600F1D749 /* CalculationsUtils.m in Sources */,
+				BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */,
+				BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */,
 				BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */,
-				BDE5A41F1CB35DBF00F1D749 /* UIView+Shadow.m in Sources */,
-				BDE5A41D1CB35DBF00F1D749 /* UILabel+Subview.m in Sources */,
-				BDE5A41E1CB35DBF00F1D749 /* UIView+HorizontalView.m in Sources */,
-				BDE5A4201CB35DBF00F1D749 /* UIView+Subviews.m in Sources */,
 				BDE5A3FD1CB35D6200F1D749 /* main.m in Sources */,
+				BD5CF3A71CBC0C970099DA9B /* UIView+Shadow.m in Sources */,
+				BD5CF3A51CBC0C970099DA9B /* UILabel+Subview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +330,7 @@
 				BDE5A4111CB35D6200F1D749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
