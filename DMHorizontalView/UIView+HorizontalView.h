@@ -48,15 +48,22 @@ typedef enum {
 -(void) horizontalViewWithViewsArray:(NSArray<UIView *> *) viewsArray withHorizontalDistribution:(HorizontalDistribution) horizontalDistribution andVerticalLocation:(VerticalLocation) verticalLocation;
 
 
+
 /**
- This method divide a UIView with a vertical line (divisor).
- It receives an array of UIImages to add in each segment. If the parameter is empty or nil, it will only be divided.
- The NSArray must be of the same size of the number of divisions.
- It uses a UIBezierPath to draw the line on the top of the UIView.
- The return value is the distance between each divisors.
+ This method divides a UIView with a vertical line (divisor).
+ @param objectsArray An array of UIView (or any UIView related class) to add in each segment.
+
+ @returns Number of segments.
  
  */
--(CGFloat) divideIntoNumberOfSegments:(NSInteger) numberOfSegments withObjects:(NSArray *) objectsArray;
+//-(CGFloat) divideIntoSegmentsWithObjects:(NSArray<UIView *> *) objectsArray;
 
 
 @end
+
+
+
+
+
+
+

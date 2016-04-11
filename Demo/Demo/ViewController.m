@@ -53,8 +53,10 @@
         [subviewArray addObject:[self viewForSubviews]];
     }
     
+    [self.topView setBackgroundColor:[UIColor whiteColor]];
     // prepare horizontal view
     [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCentered];
+//    [self.topView divideIntoSegmentsWithObjects:subviewArray];
 }
 
 

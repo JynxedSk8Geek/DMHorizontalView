@@ -203,7 +203,7 @@ static const CGFloat kVerticalMargin = 1.0;
     return true;
 }
 
--(CGFloat) divideIntoNumberOfSegments:(NSInteger) numberOfSegments withObjects:(NSArray *) objectsArray {
+-(CGFloat) divideIntoSegmentsWithObjects:(NSArray<UIView *> *) objectsArray {
     
     void (^addSubViewInSegment)(id, CGRect) = ^(id object, CGRect rect){
         
@@ -214,8 +214,11 @@ static const CGFloat kVerticalMargin = 1.0;
         object = nil;
     };
     
-    NSInteger divisors = numberOfSegments - 1;
     
+    [self removeAllSubviews];
+    
+    NSInteger numberOfSegments = [objectsArray count];
+    NSInteger divisors = numberOfSegments - 1;
     NSInteger screenSize = [UIScreen mainScreen].bounds.size.width;
     
     CGFloat viewWidth = (CGFloat)screenSize;
@@ -252,9 +255,9 @@ static const CGFloat kVerticalMargin = 1.0;
         
         originX += distance;
     }
-    
     return distance;
 }
+
 
 -(void) addLineFromX:(CGFloat) xLocation{
     
