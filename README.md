@@ -21,44 +21,44 @@ Drag to your project all files inside DMHorizontalView folder. If using swift, a
 # Example
 ```
 - (void)viewDidLoad {
-[super viewDidLoad];
+    [super viewDidLoad];
 
-UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, CGRectGetWidth(self.view.frame), 70)];
-[titleLabel setTextColor:[UIColor blackColor]];
-[titleLabel setText:@"Horizontal Distribution Fill"];
-[titleLabel setTextAlignment:NSTextAlignmentCenter];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, CGRectGetWidth(self.view.frame), 70)];
+    [titleLabel setTextColor:[UIColor blackColor]];
+    [titleLabel setText:@"Horizontal Distribution Fill"];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
 
-// creates the super view
-UIView *superView = [[UIView alloc] initWithFrame:CGRectMake(0, [titleLabel frame].origin.y + CGRectGetHeight([titleLabel frame]), CGRectGetWidth(self.view.frame), 70)];
+    // creates the super view
+    UIView *superView = [[UIView alloc] initWithFrame:CGRectMake(0, [titleLabel frame].origin.y + CGRectGetHeight([titleLabel frame]), CGRectGetWidth(self.view.frame), 70)];
 
 
-// creates the subviews empty array
-NSMutableArray<UIView *> *viewsArray = [NSMutableArray array];
+    // creates the subviews empty array
+    NSMutableArray<UIView *> *viewsArray = [NSMutableArray array];
 
-[viewsArray addObject:[self imageViewWithImage:[UIImage facebookImage]]];
-[viewsArray addObject:[self imageViewWithImage:[UIImage twitterImage]]];
-[viewsArray addObject:[self imageViewWithImage:[UIImage linkedInImage]]];
+    [viewsArray addObject:[self imageViewWithImage:[UIImage facebookImage]]];
+    [viewsArray addObject:[self imageViewWithImage:[UIImage twitterImage]]];
+    [viewsArray addObject:[self imageViewWithImage:[UIImage linkedInImage]]];
 
-// call the instance method
-[superView horizontalViewWithViewsArray:viewsArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCentered];
+    // call the instance method
+    [superView horizontalViewWithViewsArray:viewsArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCentered];
 
-[self.view addSubview:titleLabel];
-// add super view to view controller
-[self.view addSubview:superView];
+    [self.view addSubview:titleLabel];
+    // add super view to view controller
+    [self.view addSubview:superView];
 }
 
 
 -(UIView *) viewForSubviews {
 
-CGFloat size = 40;
+    CGFloat size = 40;
 
-// CGPoint is not important
-UIView *subview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size, size)];
-[subview.layer setCornerRadius:size/2];
-[subview setBackgroundColor:[self randomColor]];
+    // CGPoint is not important
+    UIView *subview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size, size)];
+    [subview.layer setCornerRadius:size/2];
+    [subview setBackgroundColor:[self randomColor]];
 
-return subview;
-}
+    return subview;
+    }
 ```
 
 # Options
