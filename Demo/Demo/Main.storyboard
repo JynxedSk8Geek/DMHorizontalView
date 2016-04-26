@@ -33,16 +33,35 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xru-hk-pKX">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RcR-1D-mA2"/>
+                                </constraints>
+                                <state key="normal" title="Distribute"/>
+                                <connections>
+                                    <action selector="distributeSubviews:" destination="BYZ-38-t0r" eventType="touchDown" id="4ZE-dm-EiD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="h4q-4Y-41n" secondAttribute="trailing" id="64P-oE-E1W"/>
+                            <constraint firstAttribute="trailing" secondItem="Xru-hk-pKX" secondAttribute="trailing" constant="20" id="IFB-8B-0Rs"/>
                             <constraint firstItem="h4q-4Y-41n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U9V-NS-EcQ"/>
+                            <constraint firstItem="Xru-hk-pKX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Uz8-TI-eOq"/>
                             <constraint firstItem="Cxa-OL-wzc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="fNY-5j-biR"/>
                             <constraint firstItem="h4q-4Y-41n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="mo8-3v-0TA"/>
+                            <constraint firstItem="Xru-hk-pKX" firstAttribute="top" secondItem="h4q-4Y-41n" secondAttribute="bottom" constant="354" id="sFn-IW-28p"/>
                             <constraint firstAttribute="trailing" secondItem="Cxa-OL-wzc" secondAttribute="trailing" constant="20" id="sh1-37-lym"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xru-hk-pKX" secondAttribute="bottom" constant="20" id="txR-c9-kWr"/>
                             <constraint firstItem="Cxa-OL-wzc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yTh-vz-XYG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sFn-IW-28p"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bZX-xx-bqH"/>
                     <connections>

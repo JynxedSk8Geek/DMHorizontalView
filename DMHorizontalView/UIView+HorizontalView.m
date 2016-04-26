@@ -63,7 +63,7 @@ static const CGFloat kDefaultOriginY = -1;
     switch (horizontalDistribution) {
         case HorizontalDistributionFill:
             
-            [self prepareDistrutionFill:viewsArray withOriginY:originY];
+            [self prepareDistrutionFill:viewsArray withOriginY:originY animated:false];
             
             break;
             
@@ -87,20 +87,18 @@ static const CGFloat kDefaultOriginY = -1;
     [self layoutIfNeeded];
 }
 
--(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution {
+-(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution animated:(BOOL) animated {
     NSMutableArray *subviewsArray = [NSMutableArray array];
     
     for (UIView *subview in [self subviews]) {
         [subviewsArray addObject:subview];
     }
     
-    [self removeAllSubviews];
-    
     // prepare horizontal distribution
     switch (horizontalDistribution) {
         case HorizontalDistributionFill:
             
-            [self prepareDistrutionFill:subviewsArray withOriginY:kDefaultOriginY];
+            [self prepareDistrutionFill:subviewsArray withOriginY:kDefaultOriginY animated:animated];
             
             break;
             
@@ -119,8 +117,26 @@ static const CGFloat kDefaultOriginY = -1;
         default:
             break;
     }
-    
 }
+
+
+//-(void) animateSubviews:(NSArray *) subviewArray toSubviewArrayFrame:(NSArray *) subviewsNewFrame atIndex:(int) index {
+//    
+//    UIView *subview = subviewArray[index];
+//    CGRect newFrame = [subviewsNewFrame[index] frame];
+//    
+//    int i = index++;
+//    
+////    [UIView animateWithDuration:2.0 animations:^{
+////        [subview setFrame:newFrame];
+////    } completion: ^(BOOL finished) {
+////        if (finished) {
+////            [self animateSubviews:subviewArray toSubviewArrayFrame:subviewsNewFrame atIndex:i];
+////        }
+////        
+////    }];
+//}
+
 
 #pragma Mark- Distribution Normal
 -(void) prepareDistributionNormal: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
@@ -131,7 +147,6 @@ static const CGFloat kDefaultOriginY = -1;
     CGFloat originX = 0;
     
     CGFloat lastSubviewOriginX = 0.0;
-    
     
     for (UIView *subview in viewsArray) {
         
@@ -196,11 +211,13 @@ static const CGFloat kDefaultOriginY = -1;
 }
 
 #pragma Mark- Distribution Fill
--(void) prepareDistrutionFill: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
+-(void) prepareDistrutionFill: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY animated:(BOOL) animated {
     
     const CGSize viewSize = [viewsArray[0] frame].size;
     
     CGFloat padding = 2.0f;
+    
+    NSMutableArray *subviewsArray = [NSMutableArray array];
     
     int numberOfViews = [CalculationsUtils numberThatFitInScreen:viewSize.width withWidthBetweenViews:padding];
     
@@ -223,15 +240,18 @@ static const CGFloat kDefaultOriginY = -1;
             }
         }
         
-        [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        [UIView animateWithDuration:0.50 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        } completion:nil];
         
+        [subviewsArray addObject:subview];
         
         originX += padding; // add separation between subviews
         originX += (CGRectGetWidth(subview.frame)); // add the width of the subview
         
-        [self addSubview:subview];
+        if (!animated)
+            [self addSubview:subview];
     }
-    
 }
 
 

@@ -65,6 +65,10 @@
     
 }
 
+-(IBAction)distributeSubviews:(id)sender {
+     [self.topView distributeWithHorizontalDistribution:HorizontalDistributionFill animated:true];
+}
+
 
 -(UIImageView *) imageViewWithImage: (UIImage *) image {
     

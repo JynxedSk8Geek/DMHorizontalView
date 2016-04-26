@@ -50,9 +50,10 @@ typedef enum {
 /**
  This methods will distribute hozitontally only. And will use the subviews already on the view.
  
+ @param animated animates subviews while been distributed.
  @param horizontalDistribution HorizontalDistribution enum option.
  */
--(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution;
+-(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution animated:(BOOL) animated;
 
 
 /**
