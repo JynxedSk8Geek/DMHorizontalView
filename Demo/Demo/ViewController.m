@@ -58,9 +58,11 @@
     }
     
     [self.topView setBackgroundColor:[UIColor whiteColor]];
+    
+    
     // prepare horizontal view
     [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionOverlapped andVerticalLocation:VerticalLocationCentered];
-//    [self.topView divideIntoSegmentsWithObjects:subviewArray];
+    
 }
 
 

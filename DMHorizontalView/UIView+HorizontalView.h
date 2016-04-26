@@ -39,14 +39,20 @@ typedef enum {
 
 /**
  This methods creates a horizontal view with subviews.
+ 
  @param viewsArray It receives an NSArray of UIViews (that can be any type of class that subclass from UIView) and a CGSize of the size of the view that will be added.
  @param horizontalDistribution HorizontalDistribution enum option.
  @param verticalLocation VerticalLocation enum option.
- 
-
  */
 -(void) horizontalViewWithViewsArray:(NSArray<UIView *> *) viewsArray withHorizontalDistribution:(HorizontalDistribution) horizontalDistribution andVerticalLocation:(VerticalLocation) verticalLocation;
 
+
+/**
+ This methods will distribute hozitontally only. And will use the subviews already on the view.
+ 
+ @param horizontalDistribution HorizontalDistribution enum option.
+ */
+-(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution;
 
 
 /**

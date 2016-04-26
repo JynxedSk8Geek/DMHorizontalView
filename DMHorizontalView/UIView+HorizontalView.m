@@ -11,6 +11,7 @@
 static const CGFloat kPaddingBetweenSubviews = 16;
 static const CGFloat kOverlappedValue = 0.8;
 static const CGFloat kVerticalMargin = 1.0;
+static const CGFloat kDefaultOriginY = -1;
 
 @implementation UIView (HorizontalView)
 
@@ -86,6 +87,41 @@ static const CGFloat kVerticalMargin = 1.0;
     [self layoutIfNeeded];
 }
 
+-(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution {
+    NSMutableArray *subviewsArray = [NSMutableArray array];
+    
+    for (UIView *subview in [self subviews]) {
+        [subviewsArray addObject:subview];
+    }
+    
+    [self removeAllSubviews];
+    
+    // prepare horizontal distribution
+    switch (horizontalDistribution) {
+        case HorizontalDistributionFill:
+            
+            [self prepareDistrutionFill:subviewsArray withOriginY:kDefaultOriginY];
+            
+            break;
+            
+        case HorizontalDistributionOverlapped:
+            
+            [self preparDistributionOverlapped:subviewsArray withOriginY:kDefaultOriginY];
+            
+            break;
+            
+        case HorizontalDistributionNormal:
+            
+            [self prepareDistributionNormal:subviewsArray withOriginY:kDefaultOriginY];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 #pragma Mark- Distribution Normal
 -(void) prepareDistributionNormal: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
     
@@ -98,6 +134,9 @@ static const CGFloat kVerticalMargin = 1.0;
     
     
     for (UIView *subview in viewsArray) {
+        
+        if (originY == kDefaultOriginY)
+            originY = subview.frame.origin.y;
         
         if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kHorizontalDistributionNormalPadding]) {
             return;
@@ -128,6 +167,9 @@ static const CGFloat kVerticalMargin = 1.0;
     CGFloat originX = 0;
     
     for (UIView *subview in viewsArray) {
+        
+        if (originY == kDefaultOriginY)
+            originY = subview.frame.origin.y;
         
         // add borders with the same color of the superview
         [[subview layer] setBorderWidth:1.0f];
@@ -169,6 +211,9 @@ static const CGFloat kVerticalMargin = 1.0;
     CGFloat originX = 0;
 
     for (UIView *subview in viewsArray) {
+        
+        if (originY == kDefaultOriginY)
+            originY = subview.frame.origin.y;
         
         originX += padding;
         
