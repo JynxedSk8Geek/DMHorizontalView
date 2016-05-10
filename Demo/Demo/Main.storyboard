@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dUD-ji-Qhq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dUD-ji-Qhq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,38 +33,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xru-hk-pKX">
-                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QM9-uA-fRC">
+                                <rect key="frame" x="20" y="529" width="560" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RcR-1D-mA2"/>
+                                    <constraint firstAttribute="height" constant="28" id="XY7-D9-FQD"/>
                                 </constraints>
-                                <state key="normal" title="Distribute"/>
+                                <segments>
+                                    <segment title="Fill"/>
+                                    <segment title="Overlap"/>
+                                    <segment title="Normal"/>
+                                </segments>
                                 <connections>
-                                    <action selector="distributeSubviews:" destination="BYZ-38-t0r" eventType="touchDown" id="4ZE-dm-EiD"/>
+                                    <action selector="distributeSubviews:" destination="BYZ-38-t0r" eventType="valueChanged" id="H1o-rg-CwW"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="h4q-4Y-41n" secondAttribute="trailing" id="64P-oE-E1W"/>
-                            <constraint firstAttribute="trailing" secondItem="Xru-hk-pKX" secondAttribute="trailing" constant="20" id="IFB-8B-0Rs"/>
+                            <constraint firstItem="QM9-uA-fRC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="CEx-TZ-4a5"/>
                             <constraint firstItem="h4q-4Y-41n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U9V-NS-EcQ"/>
-                            <constraint firstItem="Xru-hk-pKX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Uz8-TI-eOq"/>
                             <constraint firstItem="Cxa-OL-wzc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="fNY-5j-biR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QM9-uA-fRC" secondAttribute="bottom" constant="43" id="h3v-pp-pNV"/>
                             <constraint firstItem="h4q-4Y-41n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="mo8-3v-0TA"/>
-                            <constraint firstItem="Xru-hk-pKX" firstAttribute="top" secondItem="h4q-4Y-41n" secondAttribute="bottom" constant="354" id="sFn-IW-28p"/>
                             <constraint firstAttribute="trailing" secondItem="Cxa-OL-wzc" secondAttribute="trailing" constant="20" id="sh1-37-lym"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xru-hk-pKX" secondAttribute="bottom" constant="20" id="txR-c9-kWr"/>
                             <constraint firstItem="Cxa-OL-wzc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yTh-vz-XYG"/>
+                            <constraint firstAttribute="trailing" secondItem="QM9-uA-fRC" secondAttribute="trailing" constant="20" id="zgz-Nv-9xB"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="sFn-IW-28p"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bZX-xx-bqH"/>
                     <connections>
+                        <outlet property="horizontalDistributionType" destination="QM9-uA-fRC" id="wko-7u-6HF"/>
                         <outlet property="topView" destination="h4q-4Y-41n" id="o31-u1-0f7"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIView *topView;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *horizontalDistributionType;
 
 @end
 
@@ -20,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.horizontalDistributionType.selectedSegmentIndex = 1;
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, CGRectGetWidth(self.view.frame), 70)];
     [titleLabel setTextColor:[UIColor blackColor]];
@@ -61,12 +64,34 @@
     
     
     // prepare horizontal view
-    [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionOverlapped andVerticalLocation:VerticalLocationCentered];
+    [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionOverlap andVerticalLocation:VerticalLocationCentered];
     
 }
 
 -(IBAction)distributeSubviews:(id)sender {
-     [self.topView distributeWithHorizontalDistribution:HorizontalDistributionFill animated:true];
+    
+    UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
+    const int selectedSegment = (int)[segmentedControl selectedSegmentIndex];
+    
+    switch (selectedSegment) {
+            
+        case HorizontalDistributionFill:
+            [self.topView animateWithHorizontalDistribution:HorizontalDistributionFill];
+            break;
+            
+        case HorizontalDistributionNormal:
+            [self.topView animateWithHorizontalDistribution:HorizontalDistributionNormal];
+            break;
+            
+        case HorizontalDistributionOverlap:
+            [self.topView animateWithHorizontalDistribution:HorizontalDistributionOverlap];
+            break;
+            
+        default:
+            break;
+    }
+
+    
 }
 
 
