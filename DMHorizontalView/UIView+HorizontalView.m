@@ -6,12 +6,15 @@
 //
 
 #import "UIView+HorizontalView.h"
+#import "UIView+Helper.h"
 
 //  Size between wallet views in userWalletCell
 static const CGFloat kPaddingBetweenSubviews = 16;
-static const CGFloat kOverlappedValue = 0.8;
+static const CGFloat kOverlapValue = 0.8;
 static const CGFloat kVerticalMargin = 1.0;
 static const CGFloat kDefaultOriginY = -1;
+static const CGFloat kAnimationDuration = 0.50f;
+static const CGFloat kSpringDamping = 0.50f;
 
 @implementation UIView (HorizontalView)
 
@@ -67,9 +70,9 @@ static const CGFloat kDefaultOriginY = -1;
             
             break;
             
-        case HorizontalDistributionOverlapped:
+        case HorizontalDistributionOverlap:
             
-            [self preparDistributionOverlapped:viewsArray withOriginY:originY];
+            [self prepareDistributionOverlap:viewsArray withOriginY:originY];
             
             break;
             
@@ -87,39 +90,37 @@ static const CGFloat kDefaultOriginY = -1;
     [self layoutIfNeeded];
 }
 
--(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution {
+
+-(void) animateWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution {
     NSMutableArray *subviewsArray = [NSMutableArray array];
     
     for (UIView *subview in [self subviews]) {
         [subviewsArray addObject:subview];
     }
     
-    [self removeAllSubviews];
-    
     // prepare horizontal distribution
     switch (horizontalDistribution) {
         case HorizontalDistributionFill:
             
-            [self prepareDistrutionFill:subviewsArray withOriginY:kDefaultOriginY];
+            [self animateHoriontalDistrutionFill:subviewsArray];
             
             break;
             
-        case HorizontalDistributionOverlapped:
+        case HorizontalDistributionOverlap:
             
-            [self preparDistributionOverlapped:subviewsArray withOriginY:kDefaultOriginY];
+            [self animateHoriontalDistrutionOverlapped:subviewsArray];
             
             break;
             
         case HorizontalDistributionNormal:
             
-            [self prepareDistributionNormal:subviewsArray withOriginY:kDefaultOriginY];
+            [self animateHoriontalDistrutionNormal:subviewsArray];
             
             break;
             
         default:
             break;
     }
-    
 }
 
 #pragma Mark- Distribution Normal
@@ -131,7 +132,6 @@ static const CGFloat kDefaultOriginY = -1;
     CGFloat originX = 0;
     
     CGFloat lastSubviewOriginX = 0.0;
-    
     
     for (UIView *subview in viewsArray) {
         
@@ -158,8 +158,8 @@ static const CGFloat kDefaultOriginY = -1;
     }
 }
 
-#pragma Mark- Distribution Overlapped
--(void) preparDistributionOverlapped:(NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
+#pragma Mark- Distribution Overlap
+-(void) prepareDistributionOverlap:(NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
     
     CGFloat lastSubviewOriginX = 0.0;
     
@@ -175,22 +175,22 @@ static const CGFloat kDefaultOriginY = -1;
         [[subview layer] setBorderWidth:1.0f];
         [[subview layer] setBorderColor:[self backgroundColor].CGColor];
         
-        if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kOverlappedValue]) {
+        if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kOverlapValue]) {
             return;
         }
         
         if (lastSubviewOriginX > 0.0) {
-            originX = lastSubviewOriginX + (kOverlappedValue * CGRectGetWidth(subview.frame));
+            originX = lastSubviewOriginX + (kOverlapValue * CGRectGetWidth(subview.frame));
         }
         
-        else{
+        else
             originX = 1;
-        }
+        
         
         [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
         lastSubviewOriginX = subview.frame.origin.x;
         
-         [self addSubview:subview];
+        [self addSubview:subview];
     }
 
 }
@@ -198,22 +198,62 @@ static const CGFloat kDefaultOriginY = -1;
 #pragma Mark- Distribution Fill
 -(void) prepareDistrutionFill: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
     
-    const CGSize viewSize = [viewsArray[0] frame].size;
+    const CGSize kViewSize = [viewsArray[0] frame].size;
     
     CGFloat padding = 2.0f;
+    CGFloat originX = 0;
+    NSMutableArray *subviewsArray = [NSMutableArray array];
     
-    int numberOfViews = [CalculationsUtils numberThatFitInScreen:viewSize.width withWidthBetweenViews:padding];
+    // get number of UIViews that will fit on the screen
+    const int numberOfViews = [CalculationsUtils numberThatFitInScreen:kViewSize.width withWidthBetweenViews:padding];
     
-    if (viewsArray.count < numberOfViews) {// re-distribute separation
+    // re-distribute separation
+    if (viewsArray.count < numberOfViews) {
         padding = [CalculationsUtils paddingBetweenViewsArray:viewsArray inSuperView:self];
     }
- 
-    CGFloat originX = 0;
-
+    
     for (UIView *subview in viewsArray) {
+        
+        originX += padding;
         
         if (originY == kDefaultOriginY)
             originY = subview.frame.origin.y;
+        
+        if (subview != viewsArray.lastObject) {
+            if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:padding]) {
+                break;
+            }
+        }
+        
+        [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        [subviewsArray addObject:subview];
+        
+        originX += padding; // add separation between subviews
+        originX += (CGRectGetWidth(subview.frame)); // add the width of the subview
+        
+        [self addSubview:subview];
+    }
+}
+
+#pragma mark- Animations
+-(void) animateHoriontalDistrutionFill: (NSArray<UIView *>*) viewsArray {
+    
+    const CGSize kViewSize = [viewsArray[0] frame].size;
+    const CGFloat originY = [viewsArray[0] frame].origin.y;
+    
+    CGFloat padding = 2.0f;
+    CGFloat originX = 0;
+    NSMutableArray *subviewsArray = [NSMutableArray array];
+    
+    // get number of UIViews that will fit on the screen
+    const int numberOfViews = [CalculationsUtils numberThatFitInScreen:kViewSize.width withWidthBetweenViews:padding];
+    
+    // re-distribute separation
+    if (viewsArray.count < numberOfViews) {
+        padding = [CalculationsUtils paddingBetweenViewsArray:viewsArray inSuperView:self];
+    }
+    
+    for (UIView *subview in viewsArray) {
         
         originX += padding;
         
@@ -223,34 +263,87 @@ static const CGFloat kDefaultOriginY = -1;
             }
         }
         
-        [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        // animates subview
+        [UIView animateWithDuration:kAnimationDuration delay:0.0 usingSpringWithDamping:kSpringDamping initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        } completion:nil];
         
+        [subviewsArray addObject:subview];
         
         originX += padding; // add separation between subviews
         originX += (CGRectGetWidth(subview.frame)); // add the width of the subview
-        
-        [self addSubview:subview];
+
     }
-    
 }
 
-
--(BOOL) canAddSubview:(CGRect) subviewFrame withOrigin:(CGPoint) origin withSeparation: (CGFloat) separation {
+-(void) animateHoriontalDistrutionOverlapped: (NSArray<UIView *>*) viewsArray {
     
-    CGFloat originX = origin.x + separation;
-    CGFloat nextOriginX = originX + CGRectGetWidth(subviewFrame);
-    CGFloat originY = origin.y;
+    CGFloat lastSubviewOriginX = 0.0;
+    const CGFloat originY = [viewsArray[0] frame].origin.y;
     
-    if (nextOriginX + CGRectGetWidth(subviewFrame) > CGRectGetWidth(self.frame)) {
+    //  Calculates View location to be centered if horizontalDistribution == true else, sets initial x = 0
+    CGFloat originX = 0;
+    
+    for (UIView *subview in viewsArray) {
         
-        UILabel *treeDots = [UILabel labelForLastSubviewWithFrame:CGRectMake(originX, originY, CGRectGetWidth(subviewFrame), CGRectGetHeight(subviewFrame))];
-        [self addSubview:treeDots];
+        // add borders with the same color of the superview
+        [[subview layer] setBorderWidth:1.0f];
+        [[subview layer] setBorderColor:[self backgroundColor].CGColor];
         
-        return false;
+        if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kOverlapValue]) {
+            return;
+        }
+        
+        if (lastSubviewOriginX > 0.0) {
+            originX = lastSubviewOriginX + (kOverlapValue * CGRectGetWidth(subview.frame));
+        }
+        
+        else
+            originX = 1;
+        
+        // animates subview
+        [UIView animateWithDuration:kAnimationDuration delay:0.0 usingSpringWithDamping:kSpringDamping initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        } completion:nil];
+        
+        lastSubviewOriginX = subview.frame.origin.x;
     }
-    
-    return true;
 }
+
+-(void) animateHoriontalDistrutionNormal: (NSArray<UIView *>*) viewsArray {
+    
+    const CGFloat kHorizontalDistributionNormalPadding = 5.0f;
+    const CGFloat originY = [viewsArray[0] frame].origin.y;
+    
+    //  Calculates View location to be centered if horizontalDistribution == true else, sets initial x = 0
+    CGFloat originX = 0;
+    
+    CGFloat lastSubviewOriginX = 0.0;
+    
+    for (UIView *subview in viewsArray) {
+        
+        if (![self canAddSubview:subview.frame withOrigin:CGPointMake(originX, originY) withSeparation:kHorizontalDistributionNormalPadding]) {
+            return;
+        }
+        
+        if (lastSubviewOriginX > 0.0) {
+            originX = lastSubviewOriginX + (CGRectGetWidth(subview.frame));
+            originX += kHorizontalDistributionNormalPadding;
+        }
+        
+        else{
+            originX = 1;
+        }
+        
+        // animates subview
+        [UIView animateWithDuration:kAnimationDuration delay:0.0 usingSpringWithDamping:kSpringDamping initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [subview setFrame:CGRectMake(originX, originY, CGRectGetWidth(subview.frame), CGRectGetHeight(subview.frame))];
+        } completion:nil];
+        
+        lastSubviewOriginX = subview.frame.origin.x;
+    }
+}
+
 
 -(CGFloat) divideIntoSegmentsWithObjects:(NSArray<UIView *> *) objectsArray {
     

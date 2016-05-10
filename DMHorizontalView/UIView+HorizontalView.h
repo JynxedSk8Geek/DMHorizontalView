@@ -9,7 +9,6 @@
 #import "UIView+Subviews.h"
 #import "CalculationsUtils.h"
 #import "UIView+Shadow.h"
-#import "UILabel+Subview.h"
 
 /**
  Horizontal distribution of subviews distribution in superview in the x axis
@@ -18,7 +17,7 @@ typedef enum {
     /** Distributes subviews uniformally in superview */
     HorizontalDistributionFill,
     /** Distributes subviews with overlapping with the right on top of the left in superview */
-    HorizontalDistributionOverlapped,
+    HorizontalDistributionOverlap,
     /** Distributes subviews from left to right leaving 0 from subview to subview */
     HorizontalDistributionNormal
 } HorizontalDistribution;
@@ -48,11 +47,12 @@ typedef enum {
 
 
 /**
- This methods will distribute hozitontally only. And will use the subviews already on the view.
+ This methods will distribute hozitontally only. Must only be used if the subviews are already in the superview.
  
+ @param animated animates subviews to distribution.
  @param horizontalDistribution HorizontalDistribution enum option.
  */
--(void) distributeWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution;
+-(void) animateWithHorizontalDistribution:(HorizontalDistribution) horizontalDistribution;
 
 
 /**
