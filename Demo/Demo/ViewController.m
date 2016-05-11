@@ -41,7 +41,7 @@
     [viewsArray addObject:[self imageViewWithImage:[UIImage linkedInImage]]];
     
     // call the instance method
-    [superView horizontalViewWithViewsArray:viewsArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCentered];
+    [superView horizontalViewWithViewsArray:viewsArray withHorizontalDistribution:HorizontalDistributionFill andVerticalLocation:VerticalLocationCenter];
     
     [self.view addSubview:titleLabel];
     // add super view to view controller
@@ -64,7 +64,7 @@
     
     
     // prepare horizontal view
-    [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionOverlap andVerticalLocation:VerticalLocationCentered];
+    [self.topView horizontalViewWithViewsArray:subviewArray withHorizontalDistribution:HorizontalDistributionOverlap andVerticalLocation:VerticalLocationCenter];
     
 }
 

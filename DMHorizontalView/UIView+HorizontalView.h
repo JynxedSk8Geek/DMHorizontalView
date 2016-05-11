@@ -29,7 +29,7 @@ typedef enum {
     /** Top location in superview */
     VerticalLocationTop,
     /** Centered location in superview */
-    VerticalLocationCentered,
+    VerticalLocationCenter,
     /** Bottom location in superview */
     VerticalLocationBottom
 } VerticalLocation;

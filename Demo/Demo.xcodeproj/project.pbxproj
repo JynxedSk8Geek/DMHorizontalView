@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57C416F81CE25582007F75F2 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C416F71CE25582007F75F2 /* UIView+Helper.m */; };
 		BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */; };
 		BD5CF3A51CBC0C970099DA9B /* UILabel+Subview.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39D1CBC0C970099DA9B /* UILabel+Subview.m */; };
 		BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */; };
@@ -23,8 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57C416F61CE25582007F75F2 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
-		57C416F71CE25582007F75F2 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		BD5CF39A1CBC0C970099DA9B /* CalculationsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculationsUtils.h; path = ../../DMHorizontalView/CalculationsUtils.h; sourceTree = "<group>"; };
 		BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculationsUtils.m; path = ../../DMHorizontalView/CalculationsUtils.m; sourceTree = "<group>"; };
 		BD5CF39C1CBC0C970099DA9B /* UILabel+Subview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Subview.h"; path = "../../DMHorizontalView/UILabel+Subview.h"; sourceTree = "<group>"; };
@@ -73,8 +70,6 @@
 				BD5CF3A11CBC0C970099DA9B /* UIView+Shadow.m */,
 				BD5CF3A21CBC0C970099DA9B /* UIView+Subviews.h */,
 				BD5CF3A31CBC0C970099DA9B /* UIView+Subviews.m */,
-				57C416F61CE25582007F75F2 /* UIView+Helper.h */,
-				57C416F71CE25582007F75F2 /* UIView+Helper.m */,
 			);
 			name = DMHorizontalView;
 			path = Demo;
@@ -206,7 +201,6 @@
 				BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */,
 				BD5CF3AE1CBC11D20099DA9B /* UIImage+SocialNetworks.m in Sources */,
 				BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */,
-				57C416F81CE25582007F75F2 /* UIView+Helper.m in Sources */,
 				BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */,
 				BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */,
 				BDE5A3FD1CB35D6200F1D749 /* main.m in Sources */,

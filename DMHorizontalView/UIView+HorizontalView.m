@@ -49,7 +49,7 @@ static const CGFloat kSpringDamping = 0.50f;
             originY = kVerticalMargin;
             break;
             
-        case VerticalLocationCentered:
+        case VerticalLocationCenter:
             originY = [CalculationsUtils centerForSuperView:CGRectGetHeight(self.frame) withSize:subviewSize.height];
             break;
             
