@@ -5,6 +5,8 @@ It allows you to make distributions horizontally in a super view and select vert
 
 ![Screenshot of Demo App](https://github.com/davamale/DMHorizontalView/blob/master/images/Simulator%20Screen%20Shot%20Apr%2011%2C%202016%2C%201.44.14%20PM.png)
 
+![Gif of Demo App](https://github.com/davamale/DMHorizontalView/blob/master/DMHorizontalViewDemo.gif)
+
 # Description
 A very simple and easy to use tool to make horizontal distribution of subviews.
 
