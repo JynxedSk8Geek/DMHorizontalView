@@ -9,12 +9,13 @@
 #import "UIView+Helper.h"
 
 //  Size between wallet views in userWalletCell
-static const CGFloat kPaddingBetweenSubviews = 16;
-static const CGFloat kOverlapValue = 0.8;
-static const CGFloat kVerticalMargin = 1.0;
-static const CGFloat kDefaultOriginY = -1;
-static const CGFloat kAnimationDuration = 0.50f;
-static const CGFloat kSpringDamping = 0.50f;
+static CGFloat const kPaddingBetweenSubviews = 16;
+static CGFloat const kOverlapValue = 0.8;
+static CGFloat const kVerticalMargin = 1.0;
+static CGFloat const kDefaultOriginY = -1;
+static CGFloat const kAnimationDuration = 0.50f;
+static CGFloat const kSpringDamping = 0.50f;
+static CGFloat const kHeightMinimumDifference = 2.0f;
 
 @implementation UIView (HorizontalView)
 
@@ -33,8 +34,11 @@ static const CGFloat kSpringDamping = 0.50f;
     
     const CGSize subviewSize = [viewsArray[0] frame].size;
     
-    if (subviewSize.width > self.frame.size.width || subviewSize.height > self.frame.size.height)
+    if (subviewSize.width > self.frame.size.width)
         return;
+    
+    if (subviewSize.height > self.frame.size.height)
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, CGRectGetWidth(self.frame), subviewSize.height + kHeightMinimumDifference);
     
     NSAssert(subviewSize.width < self.frame.size.width, @"Subviews width can't be bigger than superview");
     NSAssert(subviewSize.height <= self.frame.size.height, @"Subviews height can't be bigger than superview");
@@ -200,7 +204,7 @@ static const CGFloat kSpringDamping = 0.50f;
     
     const CGSize kViewSize = [viewsArray[0] frame].size;
     
-    CGFloat padding = 2.0f;
+    CGFloat padding = 8.0f;
     CGFloat originX = 0;
     NSMutableArray *subviewsArray = [NSMutableArray array];
     
