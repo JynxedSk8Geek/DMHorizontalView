@@ -202,19 +202,9 @@ static CGFloat const kHeightMinimumDifference = 2.0f;
 #pragma Mark- Distribution Fill
 -(void) prepareDistrutionFill: (NSArray<UIView *>*) viewsArray withOriginY:(CGFloat) originY {
     
-    const CGSize kViewSize = [viewsArray[0] frame].size;
-    
-    CGFloat padding = 8.0f;
+    const CGFloat padding = [CalculationsUtils paddingBetweenViewsArray:viewsArray inSuperView:self];
     CGFloat originX = 0;
     NSMutableArray *subviewsArray = [NSMutableArray array];
-    
-    // get number of UIViews that will fit on the screen
-    const int numberOfViews = [CalculationsUtils numberThatFitInScreen:kViewSize.width withWidthBetweenViews:padding];
-    
-    // re-distribute separation
-    if (viewsArray.count < numberOfViews) {
-        padding = [CalculationsUtils paddingBetweenViewsArray:viewsArray inSuperView:self];
-    }
     
     for (UIView *subview in viewsArray) {
         

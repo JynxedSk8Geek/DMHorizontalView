@@ -38,11 +38,6 @@
 
 
 +(CGFloat) paddingBetweenViewsArray: (NSArray *) viewsArray inSuperView:(UIView *) superView {
-//    return (CGRectGetWidth(superView.frame) - (viewsArray.count * 2))/viewsArray.count;
-    
-    
-    
-    
     
     CGFloat superViewWidth = CGRectGetWidth(superView.frame);
     
@@ -52,7 +47,9 @@
     
     CGFloat separation = (superViewWidthSurplus / viewsArray.count);
     
-    return separation/2;
+    CGFloat padding = separation/2;
+    
+    return padding <= 0 ? 1.0f : padding;
 }
 
 
