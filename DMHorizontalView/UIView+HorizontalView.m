@@ -22,10 +22,20 @@ static CGFloat const kHeightMinimumDifference = 2.0f;
 
 -(void) horizontalViewWithViewsArray:(NSArray<UIView *> *) viewsArray withHorizontalDistribution:(HorizontalDistribution) horizontalDistribution andVerticalLocation:(VerticalLocation) verticalLocation {
     
+    // update height constraint
+    NSLayoutConstraint *heightConstraint;
+    for (NSLayoutConstraint *constraint in self.constraints) {
+        if (constraint.firstAttribute == NSLayoutAttributeHeight) {
+            heightConstraint = constraint;
+            break;
+        }
+    }
+    
     
     // views array must contain at least one value
     if (viewsArray.count < 1)
         return;
+    
     
     /*
      Subviews height must not be larger than superview height.
@@ -37,8 +47,12 @@ static CGFloat const kHeightMinimumDifference = 2.0f;
     if (subviewSize.width > self.frame.size.width)
         return;
     
-    if (subviewSize.height > self.frame.size.height)
+    if (subviewSize.height > self.frame.size.height) {
+        
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, CGRectGetWidth(self.frame), subviewSize.height + kHeightMinimumDifference);
+        heightConstraint.constant = CGRectGetHeight(self.frame);
+        [self setNeedsUpdateConstraints];
+    }
     
     NSAssert(subviewSize.width < self.frame.size.width, @"Subviews width can't be bigger than superview");
     NSAssert(subviewSize.height <= self.frame.size.height, @"Subviews height can't be bigger than superview");

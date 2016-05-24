@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57FE8FD11CECC0B30002C359 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8FD01CECC0B30002C359 /* UIView+Helper.m */; };
+		570E71791CF4ACC500A0604F /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E71781CF4ACC500A0604F /* UIView+Helper.m */; };
 		BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */; };
 		BD5CF3A51CBC0C970099DA9B /* UILabel+Subview.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39D1CBC0C970099DA9B /* UILabel+Subview.m */; };
 		BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5CF39F1CBC0C970099DA9B /* UIView+HorizontalView.m */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57FE8FCF1CECC0B30002C359 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
-		57FE8FD01CECC0B30002C359 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
+		570E71771CF4ACC500A0604F /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Helper.h"; path = "../../DMHorizontalView/UIView+Helper.h"; sourceTree = "<group>"; };
+		570E71781CF4ACC500A0604F /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "../../DMHorizontalView/UIView+Helper.m"; sourceTree = "<group>"; };
 		BD5CF39A1CBC0C970099DA9B /* CalculationsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculationsUtils.h; path = ../../DMHorizontalView/CalculationsUtils.h; sourceTree = "<group>"; };
 		BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculationsUtils.m; path = ../../DMHorizontalView/CalculationsUtils.m; sourceTree = "<group>"; };
 		BD5CF39C1CBC0C970099DA9B /* UILabel+Subview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Subview.h"; path = "../../DMHorizontalView/UILabel+Subview.h"; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 		BD5CF3A91CBC0CA50099DA9B /* DMHorizontalView */ = {
 			isa = PBXGroup;
 			children = (
-				57FE8FCF1CECC0B30002C359 /* UIView+Helper.h */,
-				57FE8FD01CECC0B30002C359 /* UIView+Helper.m */,
+				570E71771CF4ACC500A0604F /* UIView+Helper.h */,
+				570E71781CF4ACC500A0604F /* UIView+Helper.m */,
 				BD5CF39A1CBC0C970099DA9B /* CalculationsUtils.h */,
 				BD5CF39B1CBC0C970099DA9B /* CalculationsUtils.m */,
 				BD5CF39C1CBC0C970099DA9B /* UILabel+Subview.h */,
@@ -206,7 +206,7 @@
 				BDE5A4031CB35D6200F1D749 /* ViewController.m in Sources */,
 				BD5CF3AE1CBC11D20099DA9B /* UIImage+SocialNetworks.m in Sources */,
 				BD5CF3A61CBC0C970099DA9B /* UIView+HorizontalView.m in Sources */,
-				57FE8FD11CECC0B30002C359 /* UIView+Helper.m in Sources */,
+				570E71791CF4ACC500A0604F /* UIView+Helper.m in Sources */,
 				BD5CF3A41CBC0C970099DA9B /* CalculationsUtils.m in Sources */,
 				BDE5A4001CB35D6200F1D749 /* AppDelegate.m in Sources */,
 				BDE5A3FD1CB35D6200F1D749 /* main.m in Sources */,
